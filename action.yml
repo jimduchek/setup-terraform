@@ -17,6 +17,10 @@ inputs:
     description: 'Whether or not to install a wrapper to wrap subsequent calls of the `terraform` binary and expose its STDOUT, STDERR, and exit code as outputs named `stdout`, `stderr`, and `exitcode` respectively. Defaults to `true`.'
     default: 'true'
     required: false
+  cache:
+    description: 'Whether or not to cache the Terraform CLI install locally via tool-cache. Defaults to `false`.'
+    default: 'false'
+    required: false
 runs:
   using: 'node20'
   main: 'dist/index.js'
